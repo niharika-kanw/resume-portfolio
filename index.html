@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niharika Kanwar | Portfolio</title>
+    <meta name="description" content="Personal portfolio and resume of Niharika Kanwar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">NK</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#resume">Resume</a>
+                <a href="mailto:contact@example.com" class="contact-btn">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Niharika Kanwar</h1>
+                <p class="subtitle fade-in-delayed">Software Engineer & Creative Developer</p>
+                <div class="cta-group fade-in-more">
+                    <a href="#resume" class="btn primary-btn">View Resume <i data-lucide="arrow-right"></i></a>
+                    <a href="NiharikaKanwar_Resume.pdf" download class="btn secondary-btn">Download PDF <i data-lucide="download"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume-section">
+            <div class="section-header">
+                <h2>Curriculum Vitae</h2>
+                <p>A comprehensive look at my professional journey and skills.</p>
+            </div>
+            <div class="resume-container">
+                <div class="resume-viewer-wrapper">
+                    <iframe src="NiharikaKanwar_Resume.pdf#toolbar=0" class="resume-iframe" title="Resume PDF"></iframe>
+                </div>
+                <div class="mobile-resume-link">
+                    <p>On mobile? View the PDF directly:</p>
+                    <a href="NiharikaKanwar_Resume.pdf" target="_blank" class="btn primary-btn">Open PDF</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Niharika Kanwar. Built with passion.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
