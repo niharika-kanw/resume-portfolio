@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -23,8 +25,10 @@
             <div class="logo">NK</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
                 <a href="#resume">Resume</a>
-                <a href="mailto:contact@example.com" class="contact-btn">Get in Touch</a>
+                <a href="mailto:kanwarni@msu.edu" class="contact-btn">Get in Touch</a>
             </div>
         </div>
     </nav>
@@ -33,10 +37,59 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="fade-in">Niharika Kanwar</h1>
-                <p class="subtitle fade-in-delayed">Software Engineer & Creative Developer</p>
+                <p class="subtitle fade-in-delayed">Software Engineer | AWS Cloud Club Captain | MSU CS '23</p>
                 <div class="cta-group fade-in-more">
-                    <a href="#resume" class="btn primary-btn">View Resume <i data-lucide="arrow-right"></i></a>
-                    <a href="NiharikaKanwar_Resume.pdf" download class="btn secondary-btn">Download PDF <i data-lucide="download"></i></a>
+                    <a href="#projects" class="btn primary-btn">Explore Work <i data-lucide="external-link"></i></a>
+                    <a href="NiharikaKanwar_Resume.pdf" download class="btn secondary-btn">Download Resume <i
+                            data-lucide="download"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p>Passionate about data science, cloud architecture, and systems engineering.</p>
+            </div>
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <h3>Data Science Intern</h3>
+                    <p class="company">MATASMA Digital Technologies | 2025</p>
+                    <p>Developed predictive time-series models (ARIMA, SARIMA) with 87% accuracy using Python.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Undergraduate Learning Assistant</h3>
+                    <p class="company">Michigan State University | 2026 - Present</p>
+                    <p>Teaching systems-level computer architecture and AArch64/MIPS assembly to 180+ students.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Undergraduate Research Assistant</h3>
+                    <p class="company">Michigan State University | 2024</p>
+                    <p>Optimized EV charging station placement using Genetic Algorithms in Python.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A selection of my recent technical exploits.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i data-lucide="cloud"></i></div>
+                    <h3>Lost&Found</h3>
+                    <p>Serverless platform for campus service desks built with AWS Lambda, DynamoDB, and S3.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i data-lucide="camera"></i></div>
+                    <h3>CharmBooth</h3>
+                    <p>Real-time photo booth web app using React, WebRTC, and animated particle systems.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i data-lucide="refresh-cw"></i></div>
+                    <h3>Spartan Sync</h3>
+                    <p>Accessible campus event platform with real-time RSVPs and AI-driven narration.</p>
                 </div>
             </div>
         </section>
@@ -62,9 +115,11 @@
         <div class="footer-content">
             <p>&copy; 2026 Niharika Kanwar. Built with passion.</p>
             <div class="social-links">
-                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="https://github.com/niharika-kanw" target="_blank" aria-label="GitHub"><i
+                        data-lucide="github"></i></a>
+                <a href="https://linkedin.com/in/niharika-kanwar" target="_blank" aria-label="LinkedIn"><i
+                        data-lucide="linkedin"></i></a>
+                <a href="mailto:kanwarni@msu.edu" aria-label="Email"><i data-lucide="mail"></i></a>
             </div>
         </div>
     </footer>
@@ -101,4 +156,5 @@
         });
     </script>
 </body>
+
 </html>
